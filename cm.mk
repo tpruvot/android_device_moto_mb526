@@ -20,6 +20,8 @@ $(call inherit-product-if-exists, vendor/cm/config/common_full_phone.mk)
 $(call inherit-product-if-exists, vendor/cm/config/gsm.mk)
 $(call inherit-product, device/moto/mb526/full_jordan.mk)
 
+DEVICE_PACKAGE_OVERLAYS += device/moto/mb526/overlay
+
 PRODUCT_NAME := cm_jordan_plus
 PRODUCT_BRAND := MOTO
 PRODUCT_DEVICE := jordan_plus
