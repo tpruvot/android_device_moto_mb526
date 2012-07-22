@@ -69,7 +69,7 @@ persist.sys.one_percent_batt=1
 # all/choice
 hwui.print_config=choice
 
-#Place files named by process names in /data/local/hwui.allow/ (or use HWA Selector app)
+# Place files named by process names in /data/local/hwui.deny/ (or use HWA Selector app)
 hwui.use.blacklist=true
 
 # CpuGovernorService (require ondemand cpu governor)
