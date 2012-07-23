@@ -5,6 +5,7 @@
 # DEVICE_OUT=$ANDROID_BUILD_TOP/out/target/product/mb526
 # DEVICE_TOP=$ANDROID_BUILD_TOP/device/moto/mb526
 # VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/motorola/jordan_plus
+# DEVICE_COMMON=$ANDROID_BUILD_TOP/device/moto/jordan-common
 
 # Delete unwanted apps
 rm -f $REPACK/ota/system/app/RomManager.apk
@@ -16,6 +17,9 @@ rm -f $REPACK/ota/system/media/video/*.480p.mp4
 
 # these scripts are not required or bad
 rm -f $REPACK/ota/system/etc/init.d/04modules
+
+# device specific kernel modules
+cp $DEVICE_TOP/modules/* $REPACK/ota/system/lib/modules/
 
 # add an empty script to prevent logcat errors (moto init.rc)
 touch $REPACK/ota/system/bin/mount_ext3.sh
